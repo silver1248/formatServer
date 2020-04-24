@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dropwizard.version>2.0.8</dropwizard.version>
-        <mainClass>org.sweatshop.formatServerApplication</mainClass>
+        <mainClass>org.sweatshop.format_server.FormatServerApplication</mainClass>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +93,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <mainClass>${mainClass}</mainClass>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                     </archive>
                 </configuration>
