@@ -32,4 +32,25 @@ public class FormatServerResources {
         final String value = String.format(template, name.orElse(defaultName));
         return new FormatServerSaying(counter.incrementAndGet(), value);
     }
+
+    @Path("/hello-world2")
+    @Produces(MediaType.APPLICATION_JSON)
+    public class FormatServerResources2 {
+        private final String template;
+        private final String defaultName;
+        private final AtomicLong counter;
+
+        public FormatServerResources2(String template, String defaultName) {
+            this.template = template;
+            this.defaultName = defaultName;
+            this.counter = new AtomicLong();
+        }
+
+        @GET
+        @Timed
+        public FormatServerSaying sayHello(@QueryParam("name") Optional<String> name) {
+            final String value = String.format(template, name.orElse(defaultName));
+            return new FormatServerSaying(counter.incrementAndGet(), value);
+        }
+    }
 }
