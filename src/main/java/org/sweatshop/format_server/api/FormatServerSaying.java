@@ -1,7 +1,6 @@
 package org.sweatshop.format_server.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.validator.constraints.Length;
 
 public class FormatServerSaying {
     private long id;

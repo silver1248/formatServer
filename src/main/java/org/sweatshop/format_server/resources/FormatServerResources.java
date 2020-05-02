@@ -3,7 +3,6 @@ package org.sweatshop.format_server.resources;
 import com.codahale.metrics.annotation.Timed;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -11,22 +10,23 @@ import javax.ws.rs.core.MediaType;
 import org.sweatshop.format_server.api.FormatServerSaying;
 
 import java.util.concurrent.atomic.AtomicLong;
-import java.io.BufferedReader;
+import java.util.stream.Collectors;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Optional;
 
-@Path("/")
+@javax.ws.rs.Path("/")
 @Produces(MediaType.APPLICATION_JSON)
 public class FormatServerResources {
     private final String template;
     private final String defaultName;
     private final AtomicLong counter;
-    private final String headerFile;
-    private final String footerFile;
+    private final Path headerFile;
+    private final Path footerFile;
 
-    public FormatServerResources(String template, String defaultName, String headerFile, String footerFile) {
+    public FormatServerResources(String template, String defaultName, Path headerFile, Path footerFile) {
         this.template = template;
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
@@ -34,7 +34,7 @@ public class FormatServerResources {
         this.footerFile = footerFile;
     }
 
-    @Path("hello-world")
+    @javax.ws.rs.Path("hello-world")
     @GET
     @Timed
     public FormatServerSaying sayHello(@QueryParam("name") Optional<String> name) {
@@ -46,23 +46,15 @@ public class FormatServerResources {
      * 1. make this return header+name+footer WITHOUT changing the one above
      * 2. make two files, src/main/resources/header.html & src/main/resources/footer.html and return what's in them with name in the middle
      * 3. have the paths of those files in the config.yml, and pass them through to here
-     * notice onother thing that we're getting to here from the config and follow it through
-     * 4. learn how to intercept the path, (from files/ so localhost:8080/files/a/b/c would mean find the dir/a/b/c) and print that out
+     * 4. learn how to intercept the path, (from files/ to localhost:8080/files/a/b/c would mean find the dir/a/b/c) and print that out
      * 5. put files in a directory, and find the file at that relative path, and return header file contents, path file contents, footer file contents
      * 6. if the path doesn't exist, header, error, footer (you'll need to pass an error file path in as well)
      */
-    public static String readLine(String fileName) throws FileNotFoundException, IOException {
-        String fileText = "";
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                fileText += line + "\n";
-            }
-        }
-        return fileText.substring(0, fileText.length()-1);
+    public static String readLine(Path fileName) throws FileNotFoundException, IOException {
+        return Files.lines(fileName).collect(Collectors.joining("\n", "", ""));
     }
 
-    @Path("hello-world2")
+    @javax.ws.rs.Path("hello-world2")
     @Produces(MediaType.TEXT_HTML)
     @GET
     @Timed

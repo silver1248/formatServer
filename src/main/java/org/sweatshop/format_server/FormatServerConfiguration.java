@@ -2,7 +2,11 @@ package org.sweatshop.format_server;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.nio.file.Path;
+
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class FormatServerConfiguration extends Configuration {
     @NotEmpty
@@ -11,11 +15,11 @@ public class FormatServerConfiguration extends Configuration {
     @NotEmpty
     private String defaultName;
 
-    @NotEmpty
-    private String headerFile;
+    @NotNull
+    private Path headerFile;
 
-    @NotEmpty
-    private String footerFile;
+    @NotNull
+    private Path footerFile;
 
     @JsonProperty
     public String getTemplate() {
@@ -38,22 +42,22 @@ public class FormatServerConfiguration extends Configuration {
     }
 
     @JsonProperty
-    public String getHeaderFile() {
+    public Path getHeaderFile() {
         return headerFile;
     }
 
     @JsonProperty
-    public void setHeaderFile(String header) {
+    public void setHeaderFile(Path header) {
         this.headerFile = header;
     }
 
     @JsonProperty
-    public String getFooterFile() {
+    public Path getFooterFile() {
         return footerFile;
     }
 
     @JsonProperty
-    public void setFooterFile(String footer) {
+    public void setFooterFile(Path footer) {
         this.footerFile = footer;
     }
 }
