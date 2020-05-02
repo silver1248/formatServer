@@ -4,6 +4,7 @@ import org.sweatshop.format_server.health.FormatServerHealthCheck;
 import org.sweatshop.format_server.resources.FormatServerResources;
 
 import io.dropwizard.Application;
+import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -27,7 +28,9 @@ public class FormatServerApplication extends Application<FormatServerConfigurati
                     Environment environment) {
         final FormatServerResources resource = new FormatServerResources(
                 configuration.getTemplate(),
-                configuration.getDefaultName()
+                configuration.getDefaultName(),
+                configuration.getHeaderFile(),
+                configuration.getFooterFile()
             );
             final FormatServerHealthCheck healthCheck =
                 new FormatServerHealthCheck(configuration.getTemplate());

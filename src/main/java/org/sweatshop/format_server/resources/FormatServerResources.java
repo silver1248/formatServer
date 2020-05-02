@@ -23,11 +23,15 @@ public class FormatServerResources {
     private final String template;
     private final String defaultName;
     private final AtomicLong counter;
+    private final String headerFile;
+    private final String footerFile;
 
-    public FormatServerResources(String template, String defaultName) {
+    public FormatServerResources(String template, String defaultName, String headerFile, String footerFile) {
         this.template = template;
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
+        this.headerFile = headerFile;
+        this.footerFile = footerFile;
     }
 
     @Path("hello-world")
@@ -42,6 +46,7 @@ public class FormatServerResources {
      * 1. make this return header+name+footer WITHOUT changing the one above
      * 2. make two files, src/main/resources/header.html & src/main/resources/footer.html and return what's in them with name in the middle
      * 3. have the paths of those files in the config.yml, and pass them through to here
+     * notice onother thing that we're getting to here from the config and follow it through
      * 4. learn how to intercept the path, (from files/ so localhost:8080/files/a/b/c would mean find the dir/a/b/c) and print that out
      * 5. put files in a directory, and find the file at that relative path, and return header file contents, path file contents, footer file contents
      * 6. if the path doesn't exist, header, error, footer (you'll need to pass an error file path in as well)
@@ -53,16 +58,16 @@ public class FormatServerResources {
             while ((line = br.readLine()) != null) {
                 fileText += line + "\n";
             }
-         }
+        }
         return fileText.substring(0, fileText.length()-1);
     }
-    
+
     @Path("hello-world2")
     @Produces(MediaType.TEXT_HTML)
     @GET
     @Timed
     public String sayHello2(@QueryParam("name") Optional<String> name) throws FileNotFoundException, IOException {
-        final String value = String.format("%s %s %s", readLine("src/main/resources/header.html"), name.orElse(defaultName), readLine("src/main/resources/footer.html"));
+        final String value = String.format("%s %s %s", readLine(headerFile), name.orElse(defaultName), readLine(footerFile));
         return value;
     }
 }

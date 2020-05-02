@@ -9,7 +9,13 @@ public class FormatServerConfiguration extends Configuration {
     private String template;
 
     @NotEmpty
-    private String defaultName = "Stranger";
+    private String defaultName;
+
+    @NotEmpty
+    private String headerFile;
+
+    @NotEmpty
+    private String footerFile;
 
     @JsonProperty
     public String getTemplate() {
@@ -29,5 +35,25 @@ public class FormatServerConfiguration extends Configuration {
     @JsonProperty
     public void setDefaultName(String name) {
         this.defaultName = name;
+    }
+
+    @JsonProperty
+    public String getHeaderFile() {
+        return headerFile;
+    }
+
+    @JsonProperty
+    public void setHeaderFile(String header) {
+        this.headerFile = header;
+    }
+
+    @JsonProperty
+    public String getFooterFile() {
+        return footerFile;
+    }
+
+    @JsonProperty
+    public void setFooterFile(String footer) {
+        this.footerFile = footer;
     }
 }
