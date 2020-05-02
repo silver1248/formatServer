@@ -1,6 +1,10 @@
 package org.sweatshop.format_server;
 
 import io.dropwizard.Configuration;
+import lombok.EqualsAndHashCode;
+import lombok.Value;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.nio.file.Path;
@@ -8,56 +12,22 @@ import java.nio.file.Path;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+@Value
+@EqualsAndHashCode(callSuper=false)
 public class FormatServerConfiguration extends Configuration {
-    @NotEmpty
-    private String template;
+    @NotEmpty String template;
+    @NotEmpty String defaultName;
+    @NotNull Path headerFile;
+    @NotNull Path footerFile;
 
-    @NotEmpty
-    private String defaultName;
-
-    @NotNull
-    private Path headerFile;
-
-    @NotNull
-    private Path footerFile;
-
-    @JsonProperty
-    public String getTemplate() {
-        return template;
-    }
-
-    @JsonProperty
-    public void setTemplate(String template) {
+    @JsonCreator
+    public FormatServerConfiguration(
+            @JsonProperty("template") String template, @JsonProperty("defaultName") String defaultName,
+            @JsonProperty("headerFile") Path headerFile, @JsonProperty("footerFile") Path footerFile)
+    {
         this.template = template;
-    }
-
-    @JsonProperty
-    public String getDefaultName() {
-        return defaultName;
-    }
-
-    @JsonProperty
-    public void setDefaultName(String name) {
-        this.defaultName = name;
-    }
-
-    @JsonProperty
-    public Path getHeaderFile() {
-        return headerFile;
-    }
-
-    @JsonProperty
-    public void setHeaderFile(Path header) {
-        this.headerFile = header;
-    }
-
-    @JsonProperty
-    public Path getFooterFile() {
-        return footerFile;
-    }
-
-    @JsonProperty
-    public void setFooterFile(Path footer) {
-        this.footerFile = footer;
+        this.defaultName = defaultName;
+        this.headerFile = headerFile;
+        this.footerFile = footerFile;
     }
 }
