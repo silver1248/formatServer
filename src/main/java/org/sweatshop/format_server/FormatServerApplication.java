@@ -29,7 +29,8 @@ public class FormatServerApplication extends Application<FormatServerConfigurati
                 configuration.getTemplate(),
                 configuration.getDefaultName(),
                 configuration.getHeaderFile(),
-                configuration.getFooterFile()
+                configuration.getFooterFile(),
+                configuration.getFilesDir()
             );
             final FormatServerHealthCheck healthCheck =
                 new FormatServerHealthCheck(configuration.getTemplate());
