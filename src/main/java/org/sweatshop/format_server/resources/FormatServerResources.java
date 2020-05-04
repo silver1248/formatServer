@@ -60,6 +60,7 @@ public class FormatServerResources {
 
     @javax.ws.rs.Path("hello-world2")
     @Produces(MediaType.TEXT_HTML)
+    
     @GET
     @Timed
     public String sayHello2(@QueryParam("name") Optional<String> name) throws FileNotFoundException, IOException {
@@ -72,6 +73,8 @@ public class FormatServerResources {
     @GET
     @Timed
     public String sayHello3(@PathParam("file") String file) throws FileNotFoundException, IOException {
+        String combinedPath = filesDir.resolve(file).toString();
+        String newPath = "dir" + combinedPath.substring(25);
         return filesDir.resolve(file).toString();
     }
 }
