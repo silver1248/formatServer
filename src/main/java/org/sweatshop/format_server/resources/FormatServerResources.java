@@ -2,6 +2,8 @@ package org.sweatshop.format_server.resources;
 
 import com.codahale.metrics.annotation.Timed;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -20,6 +22,7 @@ import java.util.Optional;
 
 @javax.ws.rs.Path("/")
 @Produces(MediaType.APPLICATION_JSON)
+@Slf4j
 public class FormatServerResources {
     private final String template;
     private final String defaultName;
@@ -50,7 +53,7 @@ public class FormatServerResources {
      * 2. make two files, src/main/resources/header.html & src/main/resources/footer.html and return what's in them with name in the middle
      * 3. have the paths of those files in the config.yml, and pass them through to here
      * 4. learn how to intercept the path, (from files/ so localhost:8080/files/a/ would mean find the dir/a/) and print that out
-     * maybe use filesDir.resolve("example")
+     * maybe use pathVar.resolve("example")
      * 5. put files in a directory, and find the file at that relative path, and return header file contents, path file contents, footer file contents
      * 6. if the path doesn't exist, header, error, footer (you'll need to pass an error file path in as well)
      */
@@ -72,9 +75,17 @@ public class FormatServerResources {
     @Produces(MediaType.TEXT_HTML)
     @GET
     @Timed
-    public String sayHello3(@PathParam("file") String file) throws FileNotFoundException, IOException {
-        String combinedPath = filesDir.resolve(file).toString();
-        String newPath = "dir" + combinedPath.substring(25);
-        return filesDir.resolve(file).toString();
+    public String sayHello3(@PathParam("file") String fileName) throws FileNotFoundException, IOException {
+        log.error("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        log.info("headerFile {}", headerFile);
+        String headerContents = readLine(headerFile);
+        log.info("headerContents {}", headerContents);
+        String footerContents = readLine(footerFile);
+        log.info("footerContents {}", footerContents);
+        Path filePath = filesDir.resolve(fileName);
+        String fileContents = readLine(filePath);
+        log.info("fileContents {}", fileContents);
+        String combinedContents = headerContents + " " + fileContents + " " + footerContents;
+        return combinedContents;
     }
 }
