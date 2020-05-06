@@ -2,7 +2,7 @@ package org.sweatshop.format_server.resources;
 
 import com.codahale.metrics.annotation.Timed;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.Value;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.PathParam;
@@ -11,8 +11,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.sweatshop.format_server.api.FormatServerSaying;
+import org.sweatshop.format_server.config.FilesConfig;
 
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -22,30 +22,18 @@ import java.util.Optional;
 
 @javax.ws.rs.Path("/")
 @Produces(MediaType.APPLICATION_JSON)
-@Slf4j
+@Value
 public class FormatServerResources {
-    private final String template;
-    private final String defaultName;
-    private final AtomicLong counter;
-    private final Path headerFile;
-    private final Path footerFile;
-    private final Path filesDir;
-
-    public FormatServerResources(String template, String defaultName, Path headerFile, Path footerFile, Path filesDir) {
-        this.template = template;
-        this.defaultName = defaultName;
-        this.counter = new AtomicLong();
-        this.headerFile = headerFile;
-        this.footerFile = footerFile;
-        this.filesDir = filesDir;
-    }
+    String template;
+    String defaultName;
+    FilesConfig filesConfig;
 
     @javax.ws.rs.Path("hello-world")
     @GET
     @Timed
     public FormatServerSaying sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
-        return new FormatServerSaying(counter.incrementAndGet(), value);
+        return new FormatServerSaying(2, value);
     }
 
     /*
@@ -67,7 +55,10 @@ public class FormatServerResources {
     @GET
     @Timed
     public String sayHello2(@QueryParam("name") Optional<String> name) throws FileNotFoundException, IOException {
-        final String value = String.format("%s %s %s", readLine(headerFile), name.orElse(defaultName), readLine(footerFile));
+        final String value = String.format("%s %s %s"
+                , readLine(filesConfig.getHeaderFile())
+                , name.orElse(defaultName)
+                , readLine(filesConfig.getFooterFile()));
         return value;
     }
 
@@ -76,16 +67,8 @@ public class FormatServerResources {
     @GET
     @Timed
     public String sayHello3(@PathParam("file") String fileName) throws FileNotFoundException, IOException {
-        log.error("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        log.info("headerFile {}", headerFile);
-        String headerContents = readLine(headerFile);
-        log.info("headerContents {}", headerContents);
-        String footerContents = readLine(footerFile);
-        log.info("footerContents {}", footerContents);
-        Path filePath = filesDir.resolve(fileName);
-        String fileContents = readLine(filePath);
-        log.info("fileContents {}", fileContents);
-        String combinedContents = headerContents + " " + fileContents + " " + footerContents;
-        return combinedContents;
+        return readLine(filesConfig.getHeaderFile()) + " " 
+                + readLine(filesConfig.getFilesDir().resolve(fileName)) + " " 
+                + readLine(filesConfig.getFooterFile());
     }
 }

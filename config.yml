@@ -4,6 +4,7 @@ logging:
     org.sweatshop: DEBUG
 template: Hello, %s!
 defaultName: Stranger
-headerFile: "src/main/resources/header.html"
-footerFile: "src/main/resources/footer.html"
-filesDir: "src/main/resources/files"
+filesConfig:
+  headerFile: "src/main/resources/header.html"
+  footerFile: "src/main/resources/footer.html"
+  filesDir: "src/main/resources/files"
