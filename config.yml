@@ -8,3 +8,4 @@ filesConfig:
   headerFile: "src/main/resources/header.html"
   footerFile: "src/main/resources/footer.html"
   filesDir: "src/main/resources/files"
+  error404: "src/main/resources/error404.html"

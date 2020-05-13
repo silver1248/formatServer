@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 13 19:32:55 EDT 2020</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (291 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.getDefaultNameTest()'><b>getDefaultNameTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.getFilesConfigTest()'><b>getFilesConfigTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.getTemplateTest()'><b>getTemplateTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readLineTest()'><b>readLineTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\main\resources\files\george, WATCH OUT FOR THAT TREE, null</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readLineTest()'><b>readLineTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\main\resources\files\john, , java.nio.file.NoSuchFileException: src\main\resources\files\john</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readLineTest()'><b>readLineTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\main\resources\header.html, Header from a file
+line2 from the file, null</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readLineTest()'><b>readLineTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\main\resources\footer.html, footer from a file, null</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readLineTest()'><b>readLineTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\main\resources\foot, , java.nio.file.NoSuchFileException: src\main\resources\foot</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional.empty, Header from a file
+line2 from the file Stranger footer from a file, Hello, %s!, Stranger</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[Hello], Header from a file
+line2 from the file Hello footer from a file, Hello, %s!, Stranger</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[George], Header from a file
+line2 from the file George footer from a file, Hello, %s!, Stranger</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+<tr>
+<td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[src/test/resources/footer.html], Header from a file
+line2 from the file src/test/resources/footer.html footer from a file, Hello, %s!, Stranger</td>
+<td></td>
+<td>0</td>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-13T19:32:55 EDT" name="Default suite" finished-at="2020-05-13T19:32:56 EDT" duration-ms="291">
+    <groups>
+    </groups>
+    <test started-at="2020-05-13T19:32:55 EDT" name="Default test" finished-at="2020-05-13T19:32:56 EDT" duration-ms="291">
+      <class name="org.sweatshop.format_server.resources.FormatServerResourcesTest">
+        <test-method signature="getDefaultNameTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="getDefaultNameTest" finished-at="2020-05-13T19:32:55 EDT" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDefaultNameTest -->
+        <test-method signature="getFilesConfigTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="getFilesConfigTest" finished-at="2020-05-13T19:32:55 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFilesConfigTest -->
+        <test-method signature="getTemplateTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="getTemplateTest" finished-at="2020-05-13T19:32:55 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTemplateTest -->
+        <test-method signature="readLineTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="readLineTest" data-provider="readLineTestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src\main\resources\files\george]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WATCH OUT FOR THAT TREE]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readLineTest -->
+        <test-method signature="readLineTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="readLineTest" data-provider="readLineTestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src\main\resources\files\john]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[java.nio.file.NoSuchFileException: src\main\resources\files\john]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readLineTest -->
+        <test-method signature="readLineTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="readLineTest" data-provider="readLineTestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src\main\resources\header.html]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readLineTest -->
+        <test-method signature="readLineTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="readLineTest" data-provider="readLineTestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src\main\resources\footer.html]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readLineTest -->
+        <test-method signature="readLineTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="readLineTest" data-provider="readLineTestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src\main\resources\foot]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[java.nio.file.NoSuchFileException: src\main\resources\foot]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readLineTest -->
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional.empty]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file Stranger footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHello2Test -->
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional[Hello]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file Hello footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHello2Test -->
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:55 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-13T19:32:55 EDT" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional[George]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file George footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHello2Test -->
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@37858383]" started-at="2020-05-13T19:32:56 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-13T19:32:56 EDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional[src/test/resources/footer.html]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file src/test/resources/footer.html footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHello2Test -->
+      </class> <!-- org.sweatshop.format_server.resources.FormatServerResourcesTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
