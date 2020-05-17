@@ -58,11 +58,11 @@ public class FormatServerResources {
     @Produces(MediaType.TEXT_HTML)
     @GET
     @Timed
-    public String sayHello3(@PathParam("file") String fileName) throws FileNotFoundException, IOException {
-        Path path = filesConfig.getFilesDir().resolve(fileName);
+    public String sayHello3(@PathParam("file") Optional<String> in) throws FileNotFoundException, IOException {
+        Path path = filesConfig.getFilesDir().resolve(in.get());
         if (path.toFile().exists()) {
-            return readFile(filesConfig.getHeaderFile()) + " " 
-                    + readFile(path) + " " 
+            return readFile(filesConfig.getHeaderFile()) + " "
+                    + readFile(path) + " "
                     + readFile(filesConfig.getFooterFile());
         } else {
             return readFile(filesConfig.getHeaderFile()) + " " 

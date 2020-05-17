@@ -7,9 +7,10 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Builder;
 import lombok.Value;
 
-@Value
+@Value @Builder
 public class FilesConfig {
     @NotNull Path headerFile;
     @NotNull Path footerFile;

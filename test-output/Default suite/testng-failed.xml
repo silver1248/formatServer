@@ -5,7 +5,7 @@
     <classes>
       <class name="org.sweatshop.format_server.resources.FormatServerResourcesTest">
         <methods>
-          <include name="readLineTest" invocation-numbers="4"/>
+          <include name="sayHello3Test" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- org.sweatshop.format_server.resources.FormatServerResourcesTest -->
     </classes>
