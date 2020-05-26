@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Dorian\AppData\Local\Temp\testng-eclipse--905999049\testng-customsuite.xml</span>
+                    <span>C:\Users\Dorian\AppData\Local\Temp\testng-eclipse-16365873\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">20 methods,   20 passed</span>
+                    <span class="method-stats">26 methods, 2 failed,   24 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.FormatServerApplicationTest" class="method navigator-link" hash-for-method="runTest">runTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.config.FilesConfigTest" class="method navigator-link" hash-for-method="triedSendingNullTest">triedSendingNullTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -112,17 +131,27 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.FormatServerApplicationTest" class="method navigator-link" hash-for-method="getNameTest">getNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="getTemplateTest">getTemplateTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)">readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.api.FormatServerConfigurationTest" class="method navigator-link" hash-for-method="getVariableTest">getVariableTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)">readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.api.FormatServerSayingTest" class="method navigator-link" hash-for-method="instantiationTest">instantiationTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.config.FilesConfigTest" class="method navigator-link" hash-for-method="instantiationTest">instantiationTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -144,9 +173,12 @@ line2 from the file, null)</a> <!-- method navigator-link -->
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello2Test(Optional.empty, Header from a file
-line2 from the file Stranger footer from a file, Hello, %s!, Stra...)">sayHello2Test(Optional.empty, Header from a file
-line2 from the file Stranger footer from a file, Hello, %s!, Stra...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)">readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)">readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -158,9 +190,9 @@ line2 from the file George footer from a file, Hello, %s!, Stra...)</a> <!-- met
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello2Test(Optional[Hello], Header from a file
-line2 from the file Hello footer from a file, Hello, %s!, Strang...)">sayHello2Test(Optional[Hello], Header from a file
-line2 from the file Hello footer from a file, Hello, %s!, Strang...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello2Test(Optional.empty, Header from a file
+line2 from the file Stranger footer from a file, Hello, %s!, Stra...)">sayHello2Test(Optional.empty, Header from a file
+line2 from the file Stranger footer from a file, Hello, %s!, Stra...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,6 +200,29 @@ line2 from the file Hello footer from a file, Hello, %s!, Strang...)</a> <!-- me
                         <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello2Test(Optional[src/test/resources/footer.html], Header from a file
 line2 from the file src/test/resources/...)">sayHello2Test(Optional[src/test/resources/footer.html], Header from a file
 line2 from the file src/test/resources/...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello2Test(Optional[Hello], Header from a file
+line2 from the file Hello footer from a file, Hello, %s!, Strang...)">sayHello2Test(Optional[Hello], Header from a file
+line2 from the file Hello footer from a file, Hello, %s!, Strang...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello3Test(Optional[george], Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)">sayHello3Test(Optional[george], Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello3Test(Optional[Hello], Header from a file
+line2 from the file Error 404:
+    File not found footer from a ...)">sayHello3Test(Optional[Hello], Header from a file
+line2 from the file Error 404:
+    File not found footer from a ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -190,23 +245,12 @@ line2 from the file Error 404:
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello3Test(Optional[george], Header from a file
-line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)">sayHello3Test(Optional[george], Header from a file
-line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHello3Test(Optional[Hello], Header from a file
-line2 from the file Error 404:
-    File not found footer from a ...)">sayHello3Test(Optional[Hello], Header from a file
-line2 from the file Error 404:
-    File not found footer from a ...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHelloTest(Optional[George], Hello, George!, Hello, %s!, Stranger)">sayHelloTest(Optional[George], Hello, George!, Hello, %s!, Stranger)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)">sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -217,11 +261,6 @@ line2 from the file Error 404:
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHelloTest(Optional[Hello], Hello, Hello!, Hello, %s!, Stranger)">sayHelloTest(Optional[Hello], Hello, Hello!, Hello, %s!, Stranger)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.sweatshop.format_server.resources.FormatServerResourcesTest" class="method navigator-link" hash-for-method="sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)">sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -236,6 +275,118 @@ line2 from the file Error 404:
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.sweatshop.format_server.FormatServerApplicationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runTest">
+                  </a> <!-- runTest -->
+                  <span class="method-name">runTest</span>
+                  <div class="stack-trace">java.lang.RuntimeException: Test not implemented
+	at org.sweatshop.format_server.FormatServerApplicationTest.runTest(FormatServerApplicationTest.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.sweatshop.format_server.config.FilesConfigTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="triedSendingNullTest">
+                  </a> <!-- triedSendingNullTest -->
+                  <span class="method-name">triedSendingNullTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: Sets differ: expected [] but got [ConstraintViolationImpl{interpolatedMessage=&apos;must not be null&apos;, propertyPath=headerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate=&apos;{javax.validation.constraints.NotNull.message}&apos;}, ConstraintViolationImpl{interpolatedMessage=&apos;must not be null&apos;, propertyPath=footerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate=&apos;{javax.validation.constraints.NotNull.message}&apos;}, ConstraintViolationImpl{interpolatedMessage=&apos;must not be null&apos;, propertyPath=filesDir, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate=&apos;{javax.validation.constraints.NotNull.message}&apos;}, ConstraintViolationImpl{interpolatedMessage=&apos;must not be null&apos;, propertyPath=error404, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate=&apos;{javax.validation.constraints.NotNull.message}&apos;}]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEquals(Assert.java:1268)
+	at org.testng.Assert.assertEquals(Assert.java:1248)
+	at org.sweatshop.format_server.config.FilesConfigTest.triedSendingNullTest(FilesConfigTest.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.sweatshop.format_server.FormatServerApplicationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getNameTest">
+                  </a> <!-- getNameTest -->
+                  <span class="method-name">getNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -261,22 +412,6 @@ line2 from the file Error 404:
                   <a name="getTemplateTest">
                   </a> <!-- getTemplateTest -->
                   <span class="method-name">getTemplateTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)">
-                  </a> <!-- readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot) -->
-                  <span class="method-name">readFileTest</span>
-                  <span class="parameters">(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)">
-                  </a> <!-- readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john) -->
-                  <span class="method-name">readFileTest</span>
-                  <span class="parameters">(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -308,13 +443,18 @@ line2 from the file, null)</span>
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="sayHello2Test(Optional.empty, Header from a file
-line2 from the file Stranger footer from a file, Hello, %s!, Stra...)">
-                  </a> <!-- sayHello2Test(Optional.empty, Header from a file
-line2 from the file Stranger footer from a file, Hello, %s!, Stra...) -->
-                  <span class="method-name">sayHello2Test</span>
-                  <span class="parameters">(Optional.empty, Header from a file
-line2 from the file Stranger footer from a file, Hello, %s!, Stranger)</span>
+                  <a name="readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)">
+                  </a> <!-- readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john) -->
+                  <span class="method-name">readFileTest</span>
+                  <span class="parameters">(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)">
+                  </a> <!-- readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot) -->
+                  <span class="method-name">readFileTest</span>
+                  <span class="parameters">(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -330,13 +470,13 @@ line2 from the file George footer from a file, Hello, %s!, Stranger)</span>
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="sayHello2Test(Optional[Hello], Header from a file
-line2 from the file Hello footer from a file, Hello, %s!, Strang...)">
-                  </a> <!-- sayHello2Test(Optional[Hello], Header from a file
-line2 from the file Hello footer from a file, Hello, %s!, Strang...) -->
+                  <a name="sayHello2Test(Optional.empty, Header from a file
+line2 from the file Stranger footer from a file, Hello, %s!, Stra...)">
+                  </a> <!-- sayHello2Test(Optional.empty, Header from a file
+line2 from the file Stranger footer from a file, Hello, %s!, Stra...) -->
                   <span class="method-name">sayHello2Test</span>
-                  <span class="parameters">(Optional[Hello], Header from a file
-line2 from the file Hello footer from a file, Hello, %s!, Stranger)</span>
+                  <span class="parameters">(Optional.empty, Header from a file
+line2 from the file Stranger footer from a file, Hello, %s!, Stranger)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -348,6 +488,42 @@ line2 from the file src/test/resources/...) -->
                   <span class="method-name">sayHello2Test</span>
                   <span class="parameters">(Optional[src/test/resources/footer.html], Header from a file
 line2 from the file src/test/resources/footer.html footer from a file, Hello, %s!, Stranger)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sayHello2Test(Optional[Hello], Header from a file
+line2 from the file Hello footer from a file, Hello, %s!, Strang...)">
+                  </a> <!-- sayHello2Test(Optional[Hello], Header from a file
+line2 from the file Hello footer from a file, Hello, %s!, Strang...) -->
+                  <span class="method-name">sayHello2Test</span>
+                  <span class="parameters">(Optional[Hello], Header from a file
+line2 from the file Hello footer from a file, Hello, %s!, Stranger)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sayHello3Test(Optional[george], Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)">
+                  </a> <!-- sayHello3Test(Optional[george], Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file,...) -->
+                  <span class="method-name">sayHello3Test</span>
+                  <span class="parameters">(Optional[george], Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file, Hello, %s!, Stranger, null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sayHello3Test(Optional[Hello], Header from a file
+line2 from the file Error 404:
+    File not found footer from a ...)">
+                  </a> <!-- sayHello3Test(Optional[Hello], Header from a file
+line2 from the file Error 404:
+    File not found footer from a ...) -->
+                  <span class="method-name">sayHello3Test</span>
+                  <span class="parameters">(Optional[Hello], Header from a file
+line2 from the file Error 404:
+    File not found footer from a file, Hello, %s!, Stranger, null)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -380,35 +556,18 @@ line2 from the file Error 404:
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="sayHello3Test(Optional[george], Header from a file
-line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)">
-                  </a> <!-- sayHello3Test(Optional[george], Header from a file
-line2 from the file WATCH OUT FOR THAT TREE footer from a file,...) -->
-                  <span class="method-name">sayHello3Test</span>
-                  <span class="parameters">(Optional[george], Header from a file
-line2 from the file WATCH OUT FOR THAT TREE footer from a file, Hello, %s!, Stranger, null)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sayHello3Test(Optional[Hello], Header from a file
-line2 from the file Error 404:
-    File not found footer from a ...)">
-                  </a> <!-- sayHello3Test(Optional[Hello], Header from a file
-line2 from the file Error 404:
-    File not found footer from a ...) -->
-                  <span class="method-name">sayHello3Test</span>
-                  <span class="parameters">(Optional[Hello], Header from a file
-line2 from the file Error 404:
-    File not found footer from a file, Hello, %s!, Stranger, null)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="sayHelloTest(Optional[George], Hello, George!, Hello, %s!, Stranger)">
                   </a> <!-- sayHelloTest(Optional[George], Hello, George!, Hello, %s!, Stranger) -->
                   <span class="method-name">sayHelloTest</span>
                   <span class="parameters">(Optional[George], Hello, George!, Hello, %s!, Stranger)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)">
+                  </a> <!-- sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...) -->
+                  <span class="method-name">sayHelloTest</span>
+                  <span class="parameters">(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Stranger)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -427,12 +586,49 @@ line2 from the file Error 404:
                   <span class="parameters">(Optional[Hello], Hello, Hello!, Hello, %s!, Stranger)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.sweatshop.api.FormatServerConfigurationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)">
-                  </a> <!-- sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...) -->
-                  <span class="method-name">sayHelloTest</span>
-                  <span class="parameters">(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Stranger)</span>
+                  <a name="getVariableTest">
+                  </a> <!-- getVariableTest -->
+                  <span class="method-name">getVariableTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.sweatshop.format_server.config.FilesConfigTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="instantiationTest">
+                  </a> <!-- instantiationTest -->
+                  <span class="method-name">instantiationTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.sweatshop.format_server.api.FormatServerSayingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="instantiationTest">
+                  </a> <!-- instantiationTest -->
+                  <span class="method-name">instantiationTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -440,7 +636,7 @@ line2 from the file Error 404:
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dorian\AppData\Local\Temp\testng-eclipse--905999049\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dorian\AppData\Local\Temp\testng-eclipse-16365873\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -450,6 +646,10 @@ line2 from the file Error 404:
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;org.sweatshop.format_server.resources.FormatServerResourcesTest&quot;/&gt;
+      &lt;class name=&quot;org.sweatshop.api.FormatServerConfigurationTest&quot;/&gt;
+      &lt;class name=&quot;org.sweatshop.format_server.api.FormatServerSayingTest&quot;/&gt;
+      &lt;class name=&quot;org.sweatshop.format_server.config.FilesConfigTest&quot;/&gt;
+      &lt;class name=&quot;org.sweatshop.format_server.FormatServerApplicationTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -463,7 +663,7 @@ line2 from the file Error 404:
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -489,92 +689,116 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(20);
+data.addRows(26);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getDefaultNameTest')
-data.setCell(0, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(0, 3, 11);
+data.setCell(0, 1, 'triedSendingNullTest')
+data.setCell(0, 2, 'org.sweatshop.format_server.config.FilesConfigTest')
+data.setCell(0, 3, 854);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sayHello2Test')
-data.setCell(1, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(1, 3, 10);
+data.setCell(1, 1, 'getVariableTest')
+data.setCell(1, 2, 'org.sweatshop.api.FormatServerConfigurationTest')
+data.setCell(1, 3, 188);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'sayHello3Test')
-data.setCell(2, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(2, 3, 10);
+data.setCell(2, 1, 'getNameTest')
+data.setCell(2, 2, 'org.sweatshop.format_server.FormatServerApplicationTest')
+data.setCell(2, 3, 63);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'readFileTest')
+data.setCell(3, 1, 'getDefaultNameTest')
 data.setCell(3, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(3, 3, 8);
+data.setCell(3, 3, 31);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'sayHello3Test')
+data.setCell(4, 1, 'readFileTest')
 data.setCell(4, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(4, 3, 3);
+data.setCell(4, 3, 16);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'readFileTest')
 data.setCell(5, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(5, 3, 3);
+data.setCell(5, 3, 16);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'readFileTest')
+data.setCell(6, 1, 'sayHello2Test')
 data.setCell(6, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(6, 3, 3);
+data.setCell(6, 3, 16);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'sayHello2Test')
+data.setCell(7, 1, 'sayHelloTest')
 data.setCell(7, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(7, 3, 3);
+data.setCell(7, 3, 15);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'sayHello2Test')
+data.setCell(8, 1, 'sayHello3Test')
 data.setCell(8, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(8, 3, 3);
+data.setCell(8, 3, 15);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'readFileTest')
+data.setCell(9, 1, 'sayHello3Test')
 data.setCell(9, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(9, 3, 2);
+data.setCell(9, 3, 10);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'sayHello2Test')
+data.setCell(10, 1, 'sayHello3Test')
 data.setCell(10, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(10, 3, 2);
+data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'readFileTest')
-data.setCell(11, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(11, 3, 2);
+data.setCell(11, 1, 'instantiationTest')
+data.setCell(11, 2, 'org.sweatshop.format_server.api.FormatServerSayingTest')
+data.setCell(11, 3, 0);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'sayHello3Test')
+data.setCell(12, 1, 'readFileTest')
 data.setCell(12, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(12, 3, 2);
+data.setCell(12, 3, 0);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'sayHello3Test')
+data.setCell(13, 1, 'sayHelloTest')
 data.setCell(13, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(13, 3, 2);
+data.setCell(13, 3, 0);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'getTemplateTest')
-data.setCell(14, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(14, 3, 2);
+data.setCell(14, 1, 'instantiationTest')
+data.setCell(14, 2, 'org.sweatshop.format_server.config.FilesConfigTest')
+data.setCell(14, 3, 0);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'getFilesConfigTest')
+data.setCell(15, 1, 'readFileTest')
 data.setCell(15, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(15, 3, 1);
+data.setCell(15, 3, 0);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'sayHelloTest')
+data.setCell(16, 1, 'sayHello2Test')
 data.setCell(16, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(16, 3, 1);
+data.setCell(16, 3, 0);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'sayHelloTest')
+data.setCell(17, 1, 'readFileTest')
 data.setCell(17, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(17, 3, 1);
+data.setCell(17, 3, 0);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'sayHelloTest')
 data.setCell(18, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
-data.setCell(18, 3, 1);
+data.setCell(18, 3, 0);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'sayHelloTest')
+data.setCell(19, 1, 'sayHello2Test')
 data.setCell(19, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
 data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'getFilesConfigTest')
+data.setCell(20, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
+data.setCell(20, 3, 0);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'sayHello3Test')
+data.setCell(21, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'getTemplateTest')
+data.setCell(22, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'sayHello2Test')
+data.setCell(23, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'sayHelloTest')
+data.setCell(24, 2, 'org.sweatshop.format_server.resources.FormatServerResourcesTest')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runTest')
+data.setCell(25, 2, 'org.sweatshop.format_server.FormatServerApplicationTest')
+data.setCell(25, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 70 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -607,91 +831,131 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getFilesConfigTest</span>
-                <span class="method-start">15 ms</span>
+                <span class="method-start">47 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTemplateTest</span>
-                <span class="method-start">19 ms</span>
+                <span class="method-start">47 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readFileTest(src\test\resources\files\george, WATCH OUT FOR THAT TREE, null)</span>
-                <span class="method-start">29 ms</span>
+                <span class="method-start">63 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readFileTest(src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john)</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-start">78 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readFileTest(src\test\resources\header.html, Header from a file
 line2 from the file, null)</span>
-                <span class="method-start">46 ms</span>
+                <span class="method-start">78 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readFileTest(src\test\resources\footer.html, footer from a file, null)</span>
-                <span class="method-start">50 ms</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readFileTest(src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot)</span>
-                <span class="method-start">54 ms</span>
+                <span class="method-start">110 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello2Test(Optional.empty, Header from a file
 line2 from the file Stranger footer from a file, Hello, %s!, Stra...)</span>
-                <span class="method-start">58 ms</span>
+                <span class="method-start">125 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello2Test(Optional[Hello], Header from a file
 line2 from the file Hello footer from a file, Hello, %s!, Strang...)</span>
-                <span class="method-start">69 ms</span>
+                <span class="method-start">125 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello2Test(Optional[George], Header from a file
 line2 from the file George footer from a file, Hello, %s!, Stra...)</span>
-                <span class="method-start">74 ms</span>
+                <span class="method-start">125 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello2Test(Optional[src/test/resources/footer.html], Header from a file
 line2 from the file src/test/resources/...)</span>
-                <span class="method-start">78 ms</span>
+                <span class="method-start">141 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello3Test(Optional.empty, Header from a file
 line2 from the file Error 404:
     File not found footer from a f...)</span>
-                <span class="method-start">83 ms</span>
+                <span class="method-start">141 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello3Test(Optional[Hello], Header from a file
 line2 from the file Error 404:
     File not found footer from a ...)</span>
-                <span class="method-start">95 ms</span>
+                <span class="method-start">172 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello3Test(Optional[george], Header from a file
 line2 from the file WATCH OUT FOR THAT TREE footer from a file,...)</span>
-                <span class="method-start">99 ms</span>
+                <span class="method-start">182 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHello3Test(Optional[src/test/resources/footer.html], Header from a file
 line2 from the file Error 404:
     File...)</span>
-                <span class="method-start">104 ms</span>
+                <span class="method-start">198 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHelloTest(Optional.empty, Hello, Stranger!, Hello, %s!, Stranger)</span>
-                <span class="method-start">109 ms</span>
+                <span class="method-start">198 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHelloTest(Optional[Hello], Hello, Hello!, Hello, %s!, Stranger)</span>
-                <span class="method-start">111 ms</span>
+                <span class="method-start">213 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHelloTest(Optional[George], Hello, George!, Hello, %s!, Stranger)</span>
-                <span class="method-start">113 ms</span>
+                <span class="method-start">213 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sayHelloTest(Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Strang...)</span>
-                <span class="method-start">114 ms</span>
+                <span class="method-start">213 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.sweatshop.api.FormatServerConfigurationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getVariableTest</span>
+                <span class="method-start">229 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.sweatshop.format_server.api.FormatServerSayingTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">instantiationTest</span>
+                <span class="method-start">432 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.sweatshop.format_server.config.FilesConfigTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">instantiationTest</span>
+                <span class="method-start">432 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">triedSendingNullTest</span>
+                <span class="method-start">432 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.sweatshop.format_server.FormatServerApplicationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getNameTest</span>
+                <span class="method-start">1301 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runTest</span>
+                <span class="method-start">1379 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

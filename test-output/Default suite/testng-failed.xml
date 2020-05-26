@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.sweatshop.format_server.resources.FormatServerResourcesTest">
+      <class name="org.sweatshop.format_server.FormatServerApplicationTest">
         <methods>
-          <include name="sayHello3Test" invocation-numbers="0 1 2 3"/>
+          <include name="runTest"/>
         </methods>
-      </class> <!-- org.sweatshop.format_server.resources.FormatServerResourcesTest -->
+      </class> <!-- org.sweatshop.format_server.FormatServerApplicationTest -->
+      <class name="org.sweatshop.format_server.config.FilesConfigTest">
+        <methods>
+          <include name="triedSendingNullTest"/>
+        </methods>
+      </class> <!-- org.sweatshop.format_server.config.FilesConfigTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
