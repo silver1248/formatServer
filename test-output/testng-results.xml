@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="26" passed="24" failed="2" skipped="0">
+<testng-results ignored="0" total="25" passed="25" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-20T19:45:12 EDT" name="Default suite" finished-at="2020-05-20T19:45:14 EDT" duration-ms="1441">
+  <suite started-at="2020-06-03T16:15:23 EDT" name="Default suite" finished-at="2020-06-03T16:15:24 EDT" duration-ms="1319">
     <groups>
     </groups>
-    <test started-at="2020-05-20T19:45:12 EDT" name="Default test" finished-at="2020-05-20T19:45:14 EDT" duration-ms="1441">
+    <test started-at="2020-06-03T16:15:23 EDT" name="Default test" finished-at="2020-06-03T16:15:24 EDT" duration-ms="1319">
       <class name="org.sweatshop.format_server.resources.FormatServerResourcesTest">
-        <test-method signature="getDefaultNameTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="getDefaultNameTest" finished-at="2020-05-20T19:45:12 EDT" duration-ms="31" status="PASS">
+        <test-method signature="getDefaultNameTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="getDefaultNameTest" finished-at="2020-06-03T16:15:23 EDT" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDefaultNameTest -->
-        <test-method signature="getFilesConfigTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="getFilesConfigTest" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="getFilesConfigTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="getFilesConfigTest" finished-at="2020-06-03T16:15:23 EDT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getFilesConfigTest -->
-        <test-method signature="getTemplateTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="getTemplateTest" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="getTemplateTest()[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="getTemplateTest" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTemplateTest -->
-        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,27 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFileTest -->
-        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[src\test\resources\header.html]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Header from a file
-line2 from the file]]>
-              </value>
-            </param>
-            <param index="2">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readFileTest -->
-        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,7 +59,27 @@ line2 from the file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFileTest -->
-        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="16" status="PASS">
+        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src\test\resources\header.html]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readFileTest -->
+        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,7 +98,7 @@ line2 from the file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFileTest -->
-        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="readFileTest(java.nio.file.Path, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="readFileTest" data-provider="readFileTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,34 +119,7 @@ line2 from the file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFileTest -->
-        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Optional[George]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Header from a file
-line2 from the file George footer from a file]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hello, %s!]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Stranger]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sayHello2Test -->
-        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,7 +146,7 @@ line2 from the file Stranger footer from a file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello2Test -->
-        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -200,7 +173,34 @@ line2 from the file Hello footer from a file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello2Test -->
-        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-05-20T19:45:12 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional[George]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Header from a file
+line2 from the file George footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHello2Test -->
+        <test-method signature="sayHello2Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello2Test" data-provider="sayHello2TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -227,7 +227,7 @@ line2 from the file src/test/resources/footer.html footer from a file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello2Test -->
-        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:12 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="15" status="PASS">
+        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -260,7 +260,7 @@ line2 from the file Error 404:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello3Test -->
-        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="10" status="PASS">
+        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="18" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -291,7 +291,7 @@ line2 from the file Error 404:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello3Test -->
-        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -321,33 +321,7 @@ line2 from the file WATCH OUT FOR THAT TREE footer from a file]]>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello3Test -->
-        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Optional.empty]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Hello, Stranger!]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hello, %s!]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Stranger]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sayHelloTest -->
-        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHello3Test(java.util.Optional, java.lang.String, java.lang.String, java.lang.String, java.lang.Exception)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHello3Test" data-provider="sayHello3TestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -378,16 +352,16 @@ line2 from the file Error 404:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHello3Test -->
-        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Optional[George]]]>
+                <![CDATA[Optional.empty]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Hello, George!]]>
+                <![CDATA[Hello, Stranger!]]>
               </value>
             </param>
             <param index="2">
@@ -404,33 +378,7 @@ line2 from the file Error 404:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHelloTest -->
-        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Optional[src/test/resources/footer.html]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Hello, src/test/resources/footer.html!]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hello, %s!]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Stranger]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sayHelloTest -->
-        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@27fe059d]" started-at="2020-05-20T19:45:13 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
+        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -456,117 +404,86 @@ line2 from the file Error 404:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sayHelloTest -->
+        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional[George]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hello, George!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHelloTest -->
+        <test-method signature="sayHelloTest(java.util.Optional, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.sweatshop.format_server.resources.FormatServerResourcesTest@2b08772d]" started-at="2020-06-03T16:15:23 EDT" name="sayHelloTest" data-provider="sayHelloTestDP" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Optional[src/test/resources/footer.html]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hello, src/test/resources/footer.html!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hello, %s!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Stranger]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHelloTest -->
       </class> <!-- org.sweatshop.format_server.resources.FormatServerResourcesTest -->
       <class name="org.sweatshop.api.FormatServerConfigurationTest">
-        <test-method signature="getVariableTest()[pri:0, instance:org.sweatshop.api.FormatServerConfigurationTest@766a52f5]" started-at="2020-05-20T19:45:13 EDT" name="getVariableTest" finished-at="2020-05-20T19:45:13 EDT" duration-ms="188" status="PASS">
+        <test-method signature="getVariableTest()[pri:0, instance:org.sweatshop.api.FormatServerConfigurationTest@78a8978a]" started-at="2020-06-03T16:15:23 EDT" name="getVariableTest" finished-at="2020-06-03T16:15:23 EDT" duration-ms="174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getVariableTest -->
       </class> <!-- org.sweatshop.api.FormatServerConfigurationTest -->
       <class name="org.sweatshop.format_server.api.FormatServerSayingTest">
-        <test-method signature="instantiationTest()[pri:0, instance:org.sweatshop.format_server.api.FormatServerSayingTest@4342c13]" started-at="2020-05-20T19:45:13 EDT" name="instantiationTest" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
+        <test-method signature="instantiationTest()[pri:0, instance:org.sweatshop.format_server.api.FormatServerSayingTest@f171912]" started-at="2020-06-03T16:15:23 EDT" name="instantiationTest" finished-at="2020-06-03T16:15:23 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiationTest -->
       </class> <!-- org.sweatshop.format_server.api.FormatServerSayingTest -->
       <class name="org.sweatshop.format_server.config.FilesConfigTest">
-        <test-method signature="instantiationTest()[pri:0, instance:org.sweatshop.format_server.config.FilesConfigTest@2ba1209b]" started-at="2020-05-20T19:45:13 EDT" name="instantiationTest" finished-at="2020-05-20T19:45:13 EDT" duration-ms="0" status="PASS">
+        <test-method signature="instantiationTest()[pri:0, instance:org.sweatshop.format_server.config.FilesConfigTest@7d4d8579]" started-at="2020-06-03T16:15:23 EDT" name="instantiationTest" finished-at="2020-06-03T16:15:23 EDT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiationTest -->
-        <test-method signature="triedSendingNullTest()[pri:0, instance:org.sweatshop.format_server.config.FilesConfigTest@2ba1209b]" started-at="2020-05-20T19:45:13 EDT" name="triedSendingNullTest" finished-at="2020-05-20T19:45:14 EDT" duration-ms="854" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Sets differ: expected [] but got [ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=headerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=footerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=filesDir, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=error404, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Sets differ: expected [] but got [ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=headerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=footerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=filesDir, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=error404, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEquals(Assert.java:1268)
-at org.testng.Assert.assertEquals(Assert.java:1248)
-at org.sweatshop.format_server.config.FilesConfigTest.triedSendingNullTest(FilesConfigTest.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="triedSendingNullTest()[pri:0, instance:org.sweatshop.format_server.config.FilesConfigTest@7d4d8579]" started-at="2020-06-03T16:15:23 EDT" name="triedSendingNullTest" finished-at="2020-06-03T16:15:24 EDT" duration-ms="759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- triedSendingNullTest -->
       </class> <!-- org.sweatshop.format_server.config.FilesConfigTest -->
       <class name="org.sweatshop.format_server.FormatServerApplicationTest">
-        <test-method signature="getNameTest()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@7c241a9f]" started-at="2020-05-20T19:45:14 EDT" name="getNameTest" finished-at="2020-05-20T19:45:14 EDT" duration-ms="63" status="PASS">
+        <test-method signature="getNameTest()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@159424e2]" started-at="2020-06-03T16:15:24 EDT" name="getNameTest" finished-at="2020-06-03T16:15:24 EDT" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getNameTest -->
-        <test-method signature="runTest()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@7c241a9f]" started-at="2020-05-20T19:45:14 EDT" name="runTest" finished-at="2020-05-20T19:45:14 EDT" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Test not implemented]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Test not implemented
-at org.sweatshop.format_server.FormatServerApplicationTest.runTest(FormatServerApplicationTest.java:25)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runTest -->
       </class> <!-- org.sweatshop.format_server.FormatServerApplicationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
