@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.sweatshop.format_server.config.FilesConfigTest">
+      <class name="org.sweatshop.format_server.health.FormatServerHealthCheckTest">
         <methods>
-          <include name="triedSendingNullTest"/>
+          <include name="checkBadTest"/>
         </methods>
-      </class> <!-- org.sweatshop.format_server.config.FilesConfigTest -->
+      </class> <!-- org.sweatshop.format_server.health.FormatServerHealthCheckTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

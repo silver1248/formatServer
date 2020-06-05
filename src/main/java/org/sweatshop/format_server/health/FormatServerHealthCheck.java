@@ -2,12 +2,13 @@ package org.sweatshop.format_server.health;
 
 import com.codahale.metrics.health.HealthCheck;
 
-public class FormatServerHealthCheck extends HealthCheck {
-    private final String template;
+import lombok.EqualsAndHashCode;
+import lombok.Value;
 
-    public FormatServerHealthCheck(String template) {
-        this.template = template;
-    }
+@Value
+@EqualsAndHashCode(callSuper=false)
+public class FormatServerHealthCheck extends HealthCheck {
+    String template;
 
     @Override
     protected Result check() throws Exception {
