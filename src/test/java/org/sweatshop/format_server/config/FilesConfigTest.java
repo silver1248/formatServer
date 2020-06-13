@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -14,8 +13,6 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
-import javax.validation.metadata.ConstraintDescriptor;
-
 import org.hibernate.validator.internal.engine.ConstraintViolationImpl;
 import org.hibernate.validator.internal.engine.path.PathImpl;
 import org.testng.annotations.Test;
@@ -36,29 +33,31 @@ public class FilesConfigTest {
     public void triedSendingNullTest() {
         FilesConfig fc = new FilesConfig(null, null, null, null);
         HashSet<ConstraintViolation<FilesConfig>> set = new HashSet<>();
-        //java.lang.AssertionError: Sets differ: expected [] but got [
-//        ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=filesDir, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, 
-//        ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=headerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, 
-//        ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=footerFile, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}, 
-//        ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=error404, rootBeanClass=class org.sweatshop.format_server.config.FilesConfig, messageTemplate='{javax.validation.constraints.NotNull.message}'}]
-        javax.validation.Path fdPath = PathImpl.createPathFromString("filesDir");
+
+        set.add(makeCvi("filesDir"));
+        set.add(makeCvi("headerFile"));
+        set.add(makeCvi("error404"));
+        set.add(makeCvi("footerFile"));
+
+
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+        Set<ConstraintViolation<FilesConfig>> violations = validator.validate(fc);
+
+        List<ConstraintViolation<FilesConfig>> actualList = violations.stream().sorted((x, y) -> x.getPropertyPath().toString().compareTo(y.getPropertyPath().toString())).collect(Collectors.toList());
+        List<ConstraintViolation<FilesConfig>> expectedList = set.stream().sorted((x, y) -> x.getPropertyPath().toString().compareTo(y.getPropertyPath().toString())).collect(Collectors.toList());
+        assertCVIEqualsIsh(actualList, expectedList);
+    }
+
+    public static ConstraintViolation<FilesConfig> makeCvi(String path) {
+        javax.validation.Path fdPath = PathImpl.createPathFromString(path);
 
         ConstraintViolation<FilesConfig> cvi = ConstraintViolationImpl.forBeanValidation("{javax.validation.constraints.NotNull.message}", null, null,
                 "must not be null", FilesConfig.class, null, null, null, fdPath, null, null);
-        set.add(cvi);
-
-                ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-                Validator validator = factory.getValidator();
-                Set<ConstraintViolation<FilesConfig>> violations = validator.validate(fc);
-                ConstraintViolation<FilesConfig> cvi2 = violations.stream().findAny().get();
-//                assertCVIEqualsIsh(cvi2, cvi);
-
-                List<ConstraintViolation<FilesConfig>> actualList = violations.stream().sorted((x, y) -> x.getMessage().compareTo(y.getMessage())).collect(Collectors.toList());
-                List<ConstraintViolation<FilesConfig>> expectedList = set.stream().sorted((x, y) -> x.getMessage().compareTo(y.getMessage())).collect(Collectors.toList());
-                //TODO
+        return cvi;
     }
 
-    public void assertCVIEqualsIsh(List<ConstraintViolation<?>> actual, List<ConstraintViolation<?>> expected) {
+    public <T extends Object> void assertCVIEqualsIsh(List<ConstraintViolation<T>> actual, List<ConstraintViolation<T>> expected) {
         assertEquals(actual.size(), expected.size());
         for (int i = 0; i < actual.size(); i++) {
             assertCVIEqualsIsh(actual.get(i), expected.get(i));

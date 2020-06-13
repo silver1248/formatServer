@@ -1,26 +1,15 @@
 package org.sweatshop.format_server;
 
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Paths;
-
 import javax.ws.rs.client.Client;
-import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Response;
 
-import org.sweatshop.format_server.config.FilesConfig;
-import org.sweatshop.format_server.resources.FormatServerResources;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.dropwizard.client.JerseyClientBuilder;
 import io.dropwizard.testing.DropwizardTestSupport;
@@ -30,10 +19,6 @@ public class FormatServerApplicationTest {
 
     @Test
     public void getNameTest() {
-        //        FilesConfig fc = new FilesConfig(Paths.get("src/test/resources/header.html"),
-        //                Paths.get("src/test/resources/footer.html"),
-        //                Paths.get("src/test/resources/error404.html"),
-        //                Paths.get("src/test/resources/files.html"));
         FormatServerApplication fsa = new FormatServerApplication();
         assertEquals(fsa.getName(), "hello-world");
     }
@@ -57,8 +42,6 @@ public class FormatServerApplicationTest {
 
     @Test
     public void helloWorldTest() {
-        FormatServerApplication fsa = new FormatServerApplication();
-
         Response response = client.target(
                 String.format("http://localhost:%d/hello-world/?name=fred", SUPPORT.getLocalPort()))
                 .request()
@@ -85,12 +68,13 @@ public class FormatServerApplicationTest {
                 .get();
 
         Object entity = response.getEntity();
-        InputStream is = (InputStream) entity;
-        byte[] bytes = is.readAllBytes();
-        String entityString = new String(bytes);
+        try (InputStream is = (InputStream) entity) {
+            byte[] bytes = is.readAllBytes();
+            String entityString = new String(bytes);
 
-        assertEquals(entityString, expected);
-        assertEquals(response.getStatus(), expectedStatus);
+            assertEquals(entityString, expected);
+            assertEquals(response.getStatus(), expectedStatus);
+        }
     }
 
     @DataProvider

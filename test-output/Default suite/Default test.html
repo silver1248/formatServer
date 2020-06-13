@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>41/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>40/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 13 14:23:11 EDT 2020</td>
+<td>Started on:</td><td>Sat Jun 13 15:35:05 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5766 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14675 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,150 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld2Test()'><b>helloWorld2Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest</td>
+<td><div><pre>javax.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at io.dropwizard.client.DropwizardApacheConnector.apply(DropwizardApacheConnector.java:105)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:296)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:609)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:608)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:395)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.get(JerseyInvocation.java:295)
+	at org.sweatshop.format_server.FormatServerApplicationTest.helloWorld2Test(FormatServerApplicationTest.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at com.codahale.metrics.httpclient.InstrumentedHttpRequestExecutor.execute(InstrumentedHttpRequestExecutor.java:46)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at io.dropwizard.client.DropwizardApacheConnector.apply(DropwizardApacheConnector.java:87)
+	... 38 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace181292433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace181292433'><pre>javax.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at io.dropwizard.client.DropwizardApacheConnector.apply(DropwizardApacheConnector.java:105)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:296)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:609)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:608)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:395)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.get(JerseyInvocation.java:295)
+	at org.sweatshop.format_server.FormatServerApplicationTest.helloWorld2Test(FormatServerApplicationTest.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at com.codahale.metrics.httpclient.InstrumentedHttpRequestExecutor.execute(InstrumentedHttpRequestExecutor.java:46)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at io.dropwizard.client.DropwizardApacheConnector.apply(DropwizardApacheConnector.java:87)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -115,8 +259,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace73254846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace73254846'><pre>java.lang.NullPointerException
+</pre></div><a href='#' onClick='toggleBox("stack-trace977847192", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace977847192'><pre>java.lang.NullPointerException
 	at java.base/java.util.regex.Matcher.getTextLength(Matcher.java:1770)
 	at java.base/java.util.regex.Matcher.reset(Matcher.java:416)
 	at java.base/java.util.regex.Matcher.&lt;init&gt;(Matcher.java:253)
@@ -157,225 +301,220 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
-<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: , Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-13T14:23:12.079-04:00}</td>
+<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: , Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-13T15:35:05.980-04:00}</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
-<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello, %s!, Result{isHealthy=true, duration=0, timestamp=2020-06-13T14:23:12.080-04:00}</td>
+<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello, %s!, Result{isHealthy=true, duration=0, timestamp=2020-06-13T15:35:05.980-04:00}</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
-<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: %s, Result{isHealthy=true, duration=0, timestamp=2020-06-13T14:23:12.080-04:00}</td>
+<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: %s, Result{isHealthy=true, duration=0, timestamp=2020-06-13T15:35:05.981-04:00}</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
-<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello, TEST!, Result{isHealthy=true, duration=0, timestamp=2020-06-13T14:23:12.080-04:00}</td>
+<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello, TEST!, Result{isHealthy=true, duration=0, timestamp=2020-06-13T15:35:05.981-04:00}</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
-<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello, George!, Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-13T14:23:12.079-04:00}</td>
+<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello, George!, Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-13T15:35:05.980-04:00}</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
-<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello,!, Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-13T14:23:12.079-04:00}</td>
+<td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkTest()'><b>checkTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest<br>Parameters: Hello,!, Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-13T15:35:05.980-04:00}</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.getDefaultNameTest()'><b>getDefaultNameTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.getFilesConfigTest()'><b>getFilesConfigTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.getNameTest()'><b>getNameTest</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.getTemplateTest()'><b>getTemplateTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.api.FormatServerConfigurationTest.getVariableTest()'><b>getVariableTest</b><br>Test class: org.sweatshop.api.FormatServerConfigurationTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.api.FormatServerConfigurationTest@29d405e6</td></tr>
-<tr>
-<td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld2Test()'><b>helloWorld2Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest</td>
-<td></td>
-<td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.api.FormatServerConfigurationTest@481b2f10</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld3Test()'><b>helloWorld3Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest<br>Parameters: null, Header from a file
 line2 from the file Error 404:
     File not found footer from a file, 200</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld3Test()'><b>helloWorld3Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest<br>Parameters: , {"code":404,"message":"HTTP 404 Not Found"}, 404</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld3Test()'><b>helloWorld3Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest<br>Parameters: a, Header from a file
 line2 from the file Error 404:
     File not found footer from a file, 200</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld3Test()'><b>helloWorld3Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest<br>Parameters: george, Header from a file
 line2 from the file WATCH OUT FOR THAT TREE footer from a file, 200</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorld3Test()'><b>helloWorld3Test</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest<br>Parameters: George, Header from a file
 line2 from the file WATCH OUT FOR THAT TREE footer from a file, 200</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.FormatServerApplicationTest.helloWorldTest()'><b>helloWorldTest</b><br>Test class: org.sweatshop.format_server.FormatServerApplicationTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.FormatServerApplicationTest@40bf4386</td></tr>
+<td>org.sweatshop.format_server.FormatServerApplicationTest@4e80a001</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.api.FormatServerSayingTest.instantiationTest()'><b>instantiationTest</b><br>Test class: org.sweatshop.format_server.api.FormatServerSayingTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.api.FormatServerSayingTest@4c731956</td></tr>
+<td>org.sweatshop.format_server.api.FormatServerSayingTest@2b6c7012</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.health.FormatServerHealthCheckTest.instantiationTest()'><b>instantiationTest</b><br>Test class: org.sweatshop.format_server.health.FormatServerHealthCheckTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@56826a75</td></tr>
+<td>org.sweatshop.format_server.health.FormatServerHealthCheckTest@31acfd4e</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.config.FilesConfigTest.instantiationTest()'><b>instantiationTest</b><br>Test class: org.sweatshop.format_server.config.FilesConfigTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.config.FilesConfigTest@49cd946c</td></tr>
+<td>org.sweatshop.format_server.config.FilesConfigTest@5f726750</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readFileTest()'><b>readFileTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\test\resources\files\george, WATCH OUT FOR THAT TREE, null</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readFileTest()'><b>readFileTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\test\resources\files\john, , java.nio.file.NoSuchFileException: src\test\resources\files\john</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readFileTest()'><b>readFileTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\test\resources\header.html, Header from a file
 line2 from the file, null</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readFileTest()'><b>readFileTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\test\resources\footer.html, footer from a file, null</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.readFileTest()'><b>readFileTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: src\test\resources\foot, , java.nio.file.NoSuchFileException: src\test\resources\foot</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional.empty, Header from a file
 line2 from the file Stranger footer from a file, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[Hello], Header from a file
 line2 from the file Hello footer from a file, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[George], Header from a file
 line2 from the file George footer from a file, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello2Test()'><b>sayHello2Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[src/test/resources/footer.html], Header from a file
 line2 from the file src/test/resources/footer.html footer from a file, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello3Test()'><b>sayHello3Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional.empty, Header from a file
 line2 from the file Error 404:
     File not found footer from a file, Hello, %s!, Stranger, java.util.NoSuchElementException: No value present</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello3Test()'><b>sayHello3Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[Hello], Header from a file
 line2 from the file Error 404:
     File not found footer from a file, Hello, %s!, Stranger, null</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello3Test()'><b>sayHello3Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[george], Header from a file
 line2 from the file WATCH OUT FOR THAT TREE footer from a file, Hello, %s!, Stranger, null</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHello3Test()'><b>sayHello3Test</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[src/test/resources/footer.html], Header from a file
 line2 from the file Error 404:
     File not found footer from a file, Hello, %s!, Stranger, null</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHelloTest()'><b>sayHelloTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional.empty, Hello, Stranger!, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHelloTest()'><b>sayHelloTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[Hello], Hello, Hello!, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHelloTest()'><b>sayHelloTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[George], Hello, George!, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.resources.FormatServerResourcesTest.sayHelloTest()'><b>sayHelloTest</b><br>Test class: org.sweatshop.format_server.resources.FormatServerResourcesTest<br>Parameters: Optional[src/test/resources/footer.html], Hello, src/test/resources/footer.html!, Hello, %s!, Stranger</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@5b35c7d</td></tr>
+<td>org.sweatshop.format_server.resources.FormatServerResourcesTest@4e140497</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.AnnotationTest.test()'><b>test</b><br>Test class: org.sweatshop.format_server.AnnotationTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.AnnotationTest@14d25b6e</td></tr>
+<td>org.sweatshop.format_server.AnnotationTest@624b523</td></tr>
 <tr>
 <td title='org.sweatshop.format_server.config.FilesConfigTest.triedSendingNullTest()'><b>triedSendingNullTest</b><br>Test class: org.sweatshop.format_server.config.FilesConfigTest</td>
 <td></td>
 <td>0</td>
-<td>org.sweatshop.format_server.config.FilesConfigTest@49cd946c</td></tr>
+<td>org.sweatshop.format_server.config.FilesConfigTest@5f726750</td></tr>
 </table><p>
 </body>
 </html>
