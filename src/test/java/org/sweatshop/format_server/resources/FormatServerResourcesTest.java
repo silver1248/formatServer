@@ -5,7 +5,6 @@ import static org.testng.Assert.assertNull;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.AccessDeniedException;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;

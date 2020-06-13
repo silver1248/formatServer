@@ -2,60 +2,24 @@
 <testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-05T17:43:26 EDT" name="Default suite" finished-at="2020-06-05T17:43:26 EDT" duration-ms="93">
+  <suite started-at="2020-06-12T21:26:49 EDT" name="Default suite" finished-at="2020-06-12T21:26:52 EDT" duration-ms="3324">
     <groups>
     </groups>
-    <test started-at="2020-06-05T17:43:26 EDT" name="Default test" finished-at="2020-06-05T17:43:26 EDT" duration-ms="93">
-      <class name="org.sweatshop.format_server.health.FormatServerHealthCheckTest">
-        <test-method signature="checkNullTest()[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkNullTest" finished-at="2020-06-05T17:43:26 EDT" duration-ms="10" status="PASS">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at java.base/java.util.regex.Matcher.getTextLength(Matcher.java:1770)
-at java.base/java.util.regex.Matcher.reset(Matcher.java:416)
-at java.base/java.util.regex.Matcher.<init>(Matcher.java:253)
-at java.base/java.util.regex.Pattern.matcher(Pattern.java:1133)
-at java.base/java.util.Formatter.parse(Formatter.java:2700)
-at java.base/java.util.Formatter.format(Formatter.java:2655)
-at java.base/java.util.Formatter.format(Formatter.java:2609)
-at java.base/java.lang.String.format(String.java:2897)
-at org.sweatshop.format_server.health.FormatServerHealthCheck.check(FormatServerHealthCheck.java:15)
-at org.sweatshop.format_server.health.FormatServerHealthCheckTest.checkNullTest(FormatServerHealthCheckTest.java:21)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+    <test started-at="2020-06-12T21:26:49 EDT" name="Default test" finished-at="2020-06-12T21:26:52 EDT" duration-ms="3324">
+      <class name="org.sweatshop.format_server.FormatServerApplicationTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:49 EDT" name="beforeClass" finished-at="2020-06-12T21:26:52 EDT" duration-ms="2827" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkNullTest -->
-        <test-method signature="checkTest(java.lang.String, com.codahale.metrics.health.HealthCheck$Result)[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkTest" data-provider="checkTestDP" finished-at="2020-06-05T17:43:26 EDT" duration-ms="19" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="getNameTest()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="getNameTest" finished-at="2020-06-12T21:26:52 EDT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getNameTest -->
+        <test-method signature="helloWorld2Test()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorld2Test" finished-at="2020-06-12T21:26:52 EDT" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- helloWorld2Test -->
+        <test-method signature="helloWorld3Test(java.lang.String, java.lang.String, int)[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorld3Test" data-provider="helloWorld3TestDP" finished-at="2020-06-12T21:26:52 EDT" duration-ms="32" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,98 +28,115 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-05T17:43:26.163-04:00}]]>
+                <![CDATA[{"code":404,"message":"HTTP 404 Not Found"}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[404]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTest -->
-        <test-method signature="checkTest(java.lang.String, com.codahale.metrics.health.HealthCheck$Result)[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkTest" data-provider="checkTestDP" finished-at="2020-06-05T17:43:26 EDT" duration-ms="1" status="PASS">
+        </test-method> <!-- helloWorld3Test -->
+        <test-method signature="helloWorld3Test(java.lang.String, java.lang.String, int)[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorld3Test" data-provider="helloWorld3TestDP" finished-at="2020-06-12T21:26:52 EDT" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Hello, %s!]]>
+                <![CDATA[a]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Result{isHealthy=true, duration=0, timestamp=2020-06-05T17:43:26.163-04:00}]]>
+                <![CDATA[Header from a file
+line2 from the file Error 404:
+    File not found footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTest -->
-        <test-method signature="checkTest(java.lang.String, com.codahale.metrics.health.HealthCheck$Result)[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkTest" data-provider="checkTestDP" finished-at="2020-06-05T17:43:26 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- helloWorld3Test -->
+        <test-method signature="helloWorld3Test(java.lang.String, java.lang.String, int)[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorld3Test" data-provider="helloWorld3TestDP" finished-at="2020-06-12T21:26:52 EDT" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[%s]]>
+                <![CDATA[george]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Result{isHealthy=true, duration=0, timestamp=2020-06-05T17:43:26.163-04:00}]]>
+                <![CDATA[Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTest -->
-        <test-method signature="checkTest(java.lang.String, com.codahale.metrics.health.HealthCheck$Result)[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkTest" data-provider="checkTestDP" finished-at="2020-06-05T17:43:26 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- helloWorld3Test -->
+        <test-method signature="helloWorld3Test(java.lang.String, java.lang.String, int)[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorld3Test" data-provider="helloWorld3TestDP" finished-at="2020-06-12T21:26:52 EDT" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Hello, TEST!]]>
+                <![CDATA[George]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Result{isHealthy=true, duration=0, timestamp=2020-06-05T17:43:26.163-04:00}]]>
+                <![CDATA[Header from a file
+line2 from the file WATCH OUT FOR THAT TREE footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTest -->
-        <test-method signature="checkTest(java.lang.String, com.codahale.metrics.health.HealthCheck$Result)[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkTest" data-provider="checkTestDP" finished-at="2020-06-05T17:43:26 EDT" duration-ms="1" status="PASS">
+        </test-method> <!-- helloWorld3Test -->
+        <test-method signature="helloWorld3Test(java.lang.String, java.lang.String, int)[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorld3Test" data-provider="helloWorld3TestDP" finished-at="2020-06-12T21:26:52 EDT" duration-ms="9" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[Hello, George!]]>
-              </value>
+              <value is-null="true"/>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-05T17:43:26.163-04:00}]]>
+                <![CDATA[Header from a file
+line2 from the file Error 404:
+    File not found footer from a file]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTest -->
-        <test-method signature="checkTest(java.lang.String, com.codahale.metrics.health.HealthCheck$Result)[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="checkTest" data-provider="checkTestDP" finished-at="2020-06-05T17:43:26 EDT" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Hello,!]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Result{isHealthy=false, message=template doesn't include a name, duration=0, timestamp=2020-06-05T17:43:26.163-04:00}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- helloWorld3Test -->
+        <test-method signature="helloWorldTest()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="helloWorldTest" finished-at="2020-06-12T21:26:52 EDT" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTest -->
-        <test-method signature="instantiationTest()[pri:0, instance:org.sweatshop.format_server.health.FormatServerHealthCheckTest@4cc8eb05]" started-at="2020-06-05T17:43:26 EDT" name="instantiationTest" finished-at="2020-06-05T17:43:26 EDT" duration-ms="1" status="PASS">
+        </test-method> <!-- helloWorldTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:org.sweatshop.format_server.FormatServerApplicationTest@31e5415e]" started-at="2020-06-12T21:26:52 EDT" name="afterClass" finished-at="2020-06-12T21:26:52 EDT" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- instantiationTest -->
-      </class> <!-- org.sweatshop.format_server.health.FormatServerHealthCheckTest -->
+        </test-method> <!-- afterClass -->
+      </class> <!-- org.sweatshop.format_server.FormatServerApplicationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
