@@ -13,9 +13,10 @@ public class FormatServerHealthCheck extends HealthCheck {
     @Override
     protected Result check() throws Exception {
         final String saying = String.format(template, "TEST");
-        if (!saying.contains("TEST")) {
+        if (saying.indexOf("TEST") == -1) {
             return Result.unhealthy("template doesn't include a name");
+        } else {
+            return Result.healthy();
         }
-        return Result.healthy();
     }
 }
