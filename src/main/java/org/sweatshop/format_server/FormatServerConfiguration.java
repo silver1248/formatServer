@@ -1,33 +1,31 @@
 package org.sweatshop.format_server;
 
 import io.dropwizard.Configuration;
+import lombok.EqualsAndHashCode;
+import lombok.Value;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
+import org.sweatshop.format_server.config.FilesConfig;
+
+@Value
+@EqualsAndHashCode(callSuper=false)
 public class FormatServerConfiguration extends Configuration {
-    @NotEmpty
-    private String template;
+    @NotEmpty String template;
+    @NotEmpty String defaultName;
+    @NotNull FilesConfig filesConfig;
 
-    @NotEmpty
-    private String defaultName = "Stranger";
-
-    @JsonProperty
-    public String getTemplate() {
-        return template;
-    }
-
-    @JsonProperty
-    public void setTemplate(String template) {
+    @JsonCreator
+    public FormatServerConfiguration(
+            @JsonProperty("template") String template, @JsonProperty("defaultName") String defaultName,
+            @JsonProperty("filesConfig") FilesConfig filesConfig)
+    {
         this.template = template;
-    }
-
-    @JsonProperty
-    public String getDefaultName() {
-        return defaultName;
-    }
-
-    @JsonProperty
-    public void setDefaultName(String name) {
-        this.defaultName = name;
+        this.defaultName = defaultName;
+        this.filesConfig = filesConfig;
     }
 }

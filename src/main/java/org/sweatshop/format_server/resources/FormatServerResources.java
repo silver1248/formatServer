@@ -2,67 +2,72 @@ package org.sweatshop.format_server.resources;
 
 import com.codahale.metrics.annotation.Timed;
 
+import lombok.Value;
+
 import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.sweatshop.format_server.api.FormatServerSaying;
+import org.sweatshop.format_server.config.FilesConfig;
 
-import java.util.concurrent.atomic.AtomicLong;
-import java.io.BufferedReader;
+import java.util.stream.Collectors;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
 import java.util.Optional;
 
-@Path("/")
+@javax.ws.rs.Path("/")
 @Produces(MediaType.APPLICATION_JSON)
+@Value
 public class FormatServerResources {
-    private final String template;
-    private final String defaultName;
-    private final AtomicLong counter;
+    String template;
+    String defaultName;
+    FilesConfig filesConfig;
 
-    public FormatServerResources(String template, String defaultName) {
-        this.template = template;
-        this.defaultName = defaultName;
-        this.counter = new AtomicLong();
-    }
-
-    @Path("hello-world")
+    @javax.ws.rs.Path("hello-world")
     @GET
     @Timed
     public FormatServerSaying sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
-        return new FormatServerSaying(counter.incrementAndGet(), value);
+        return new FormatServerSaying(2, value);
     }
 
-    /*
-     * 1. make this return header+name+footer WITHOUT changing the one above
-     * 2. make two files, src/main/resources/header.html & src/main/resources/footer.html and return what's in them with name in the middle
-     * 3. have the paths of those files in the config.yml, and pass them through to here
-     * 4. learn how to intercept the path, (from files/ so localhost:8080/files/a/b/c would mean find the dir/a/b/c) and print that out
-     * 5. put files in a directory, and find the file at that relative path, and return header file contents, path file contents, footer file contents
-     * 6. if the path doesn't exist, header, error, footer (you'll need to pass an error file path in as well)
-     */
-    public static String readLine(String fileName) throws FileNotFoundException, IOException {
-        String fileText = "";
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                fileText += line + "\n";
-            }
-         }
-        return fileText.substring(0, fileText.length()-1);
+    public static String readFile(Path fileName) throws FileNotFoundException, NoSuchFileException, IOException {
+        return Files.lines(fileName).collect(Collectors.joining("\n", "", ""));
     }
-    
-    @Path("hello-world2")
+
+    @javax.ws.rs.Path("hello-world2")
     @Produces(MediaType.TEXT_HTML)
+
     @GET
     @Timed
     public String sayHello2(@QueryParam("name") Optional<String> name) throws FileNotFoundException, IOException {
-        final String value = String.format("%s %s %s", readLine("src/main/resources/header.html"), name.orElse(defaultName), readLine("src/main/resources/footer.html"));
+        final String value = String.format("%s %s %s"
+                , readFile(filesConfig.getHeaderFile())
+                , name.orElse(defaultName)
+                , readFile(filesConfig.getFooterFile()));
         return value;
+    }
+
+    @javax.ws.rs.Path("/files/{file}")
+    @Produces(MediaType.TEXT_HTML)
+    @GET
+    @Timed
+    public String sayHello3(@PathParam("file") Optional<String> in) throws FileNotFoundException, IOException {
+        Path path = filesConfig.getFilesDir().resolve(in.get());
+        if (path.toFile().exists()) {
+            return readFile(filesConfig.getHeaderFile()) + " "
+                    + readFile(path) + " "
+                    + readFile(filesConfig.getFooterFile());
+        } else {
+            return readFile(filesConfig.getHeaderFile()) + " " 
+                    + readFile(filesConfig.getError404()) + " " 
+                    + readFile(filesConfig.getFooterFile());
+        }
     }
 }
