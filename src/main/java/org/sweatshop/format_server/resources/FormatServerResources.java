@@ -2,6 +2,7 @@ package org.sweatshop.format_server.resources;
 
 import com.codahale.metrics.annotation.Timed;
 
+import io.vavr.collection.List;
 import lombok.Value;
 
 import javax.ws.rs.GET;
@@ -43,7 +44,6 @@ public class FormatServerResources {
 
     @javax.ws.rs.Path("hello-world2")
     @Produces(MediaType.TEXT_HTML)
-
     @GET
     @Timed
     public String sayHello2(@QueryParam("name") Optional<String> name) throws FileNotFoundException, IOException {
@@ -69,5 +69,14 @@ public class FormatServerResources {
                     + readFile(filesConfig.getError404()) + " " 
                     + readFile(filesConfig.getFooterFile());
         }
+    }
+
+    @javax.ws.rs.Path("/files/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @GET
+    @Timed
+    public List<String> filesInFiles() {
+        List<String> files = List.of(filesConfig.getFilesDir().toFile().listFiles()).map(x -> x.getName().toString());
+        return files;
     }
 }

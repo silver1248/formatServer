@@ -6,6 +6,7 @@ import org.sweatshop.format_server.resources.FormatServerResources;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import io.vavr.jackson.datatype.VavrModule;
 import lombok.Generated;
 
 public class FormatServerApplication extends Application<FormatServerConfiguration> {
@@ -21,7 +22,7 @@ public class FormatServerApplication extends Application<FormatServerConfigurati
 
     @Override
     public void initialize(Bootstrap<FormatServerConfiguration> bootstrap) {
-        // nothing to do yet
+        bootstrap.getObjectMapper().registerModule(new VavrModule());
     }
 
     @Override

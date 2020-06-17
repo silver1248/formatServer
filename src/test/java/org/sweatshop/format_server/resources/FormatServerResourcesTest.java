@@ -15,6 +15,7 @@ import org.sweatshop.format_server.config.FilesConfig;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.vavr.collection.List;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -140,5 +141,15 @@ public class FormatServerResourcesTest {
             {Optional.of("george"), "Header from a file\nline2 from the file WATCH OUT FOR THAT TREE footer from a file", "Hello, %s!", "Stranger", null},
             {Optional.of("src/test/resources/footer.html"), "Header from a file\nline2 from the file Error 404:\n    File not found footer from a file", "Hello, %s!", "Stranger", null},
         };
+    }
+
+    @Test
+    public void filesTest() {
+        FilesConfig fc = new FilesConfig(Paths.get("src/test/resources/header.html"),
+                Paths.get("src/test/resources/footer.html"),
+                Paths.get("src/test/resources/files"),
+                Paths.get("src/test/resources/error404.html"));
+        FormatServerResources fsr = new FormatServerResources("Hello, %s!", "Stranger", fc);
+        assertEquals(fsr.filesInFiles(), List.of("fred", "george"));
     }
 }
