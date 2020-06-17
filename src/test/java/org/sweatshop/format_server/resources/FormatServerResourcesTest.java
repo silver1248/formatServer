@@ -147,9 +147,9 @@ public class FormatServerResourcesTest {
     public void filesTest() {
         FilesConfig fc = new FilesConfig(Paths.get("src/test/resources/header.html"),
                 Paths.get("src/test/resources/footer.html"),
-                Paths.get("src/test/resources/files"),
+                Paths.get("src/test/resources/empty"),
                 Paths.get("src/test/resources/error404.html"));
         FormatServerResources fsr = new FormatServerResources("Hello, %s!", "Stranger", fc);
-        assertEquals(fsr.filesInFiles(), List.of("fred", "george"));
+        assertEquals(fsr.filesInFiles(), List.empty());
     }
 }
